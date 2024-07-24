@@ -1,0 +1,37 @@
+Consulta para listar o nome de todos os alunos matriculados na disciplina de Cálculo do professor João:
+
+SELECT ALUNO.nome
+FROM ALUNO
+JOIN CURSA ON ALUNO.coda = CURSA.coda
+JOIN DISCIPLINA ON CURSA.codd = DISCIPLINA.codd
+JOIN LECONA ON DISCIPLINA.codd = LECONA.codd
+JOIN PROFESSOR ON LECONA.codp = PROFESSOR.codp
+WHERE DISCIPLINA.nome = 'Cálculo' AND PROFESSOR.nome = 'João';
+
+Consulta para exibir a quantidade de alunos por disciplinas:
+
+SELECT DISCIPLINA.nome, COUNT(*) AS quantidade_de_alunos
+FROM DISCIPLINA
+JOIN CURSA ON DISCIPLINA.codd = CURSA.codd
+GROUP BY DISCIPLINA.nome;
+
+Consulta para listar as disciplinas que todos os professores lecionam:
+
+SELECT DISCIPLINA.nome
+FROM DISCIPLINA
+JOIN LECONA ON DISCIPLINA.codd = LECONA.codd
+GROUP BY DISCIPLINA.nome
+HAVING COUNT(DISTINCT LECONA.codp) = (SELECT COUNT(*) FROM PROFESSOR);
+
+Consulta que exibe o total de professores:
+
+SELECT COUNT(*) AS total_de_professores
+FROM PROFESSOR;
+
+Consulta para listar todos os alunos que cursaram alguma disciplina do ano 2000 até 2020:
+
+SELECT DISTINCT ALUNO.nome
+FROM ALUNO
+JOIN CURSA ON ALUNO.coda = CURSA.coda
+JOIN DISCIPLINA ON CURSA.codd = DISCIPLINA.codd
+WHERE DISCIPLINA.ano BETWEEN 2000 AND 2020;

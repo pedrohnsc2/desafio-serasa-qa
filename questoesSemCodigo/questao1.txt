@@ -1,0 +1,29 @@
+Cenário de Transferência Válida: Garantir que um usuário possa transferir dinheiro com sucesso para outra conta quando todos os campos obrigatórios forem preenchidos corretamente e houver saldo suficiente.
+
+Fundos Insuficientes: Tentar uma transferência que excede o saldo da conta para verificar se o aplicativo impede corretamente a transação.
+
+Conta Destino Inválida: Inserir um número de conta inválido para verificar se o aplicativo detecta e rejeita a transação.
+
+Análise de Valor Limite: Testar exatamente no limite do saldo da conta, como tentar transferir exatamente R$ 200,00, para garantir que o aplicativo lida corretamente com condições de limite.
+
+Validação de Entrada: Verificar a resposta do aplicativo ao inserir valores não numéricos no campo "Valor", formato incorreto (colocar letras, caracteres especiais) no campo "Data de efetivação", inserir quantidade acima da máxima de caracteres no campo “Cliente destino” (inserir letras, caracteres especiais)
+
+Campos Obrigatórios: Tentar executar uma transferência sem preencher todos os campos obrigatórios para garantir que o aplicativo solicite ao usuário que os preencha.
+
+Validação de Data: Verificar se o aplicativo restringe os usuários de selecionar datas passadas ou datas que não estão em um intervalo válido para "Data de efetivação".
+
+Teste de Concorrência: Executar simultaneamente mais de uma transação para garantir que o sistema possa lidar com várias solicitações de uma vez.
+
+Tempo de Sessão Expirado: Testar o comportamento do aplicativo quando não há atividade por um certo período para verificar se ele desconecta o usuário para evitar acesso não autorizado.
+
+Confirmação de Transferência: Uma vez iniciada uma transferência, verificar se o aplicativo fornece uma mensagem ou tela de confirmação com os detalhes da transação.
+
+Limites de Transação: Testar se o aplicativo aplica limites diários ou por transação, caso tais regras sejam estabelecidas pelo banco.
+
+Tratamento de Erros: Avaliar como o aplicativo lida com erros como tempos de espera do servidor ou erros de banco de dados.
+
+Consistência de UI/UX: Verificar se a interface do aplicativo permanece consistente durante o processo de transação em termos de design, responsividade dos botões e mensagens de prompts.
+
+Acessibilidade: Garantir que o aplicativo seja acessível, com recursos como navegação por teclado e compatibilidade com leitores de tela.
+
+Localização e Internacionalização: Se o aplicativo é usado em diferentes regiões, verificar se ele suporta formatos localizados para moeda e datas.

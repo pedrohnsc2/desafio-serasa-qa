@@ -1,0 +1,10 @@
+{
+    "env": {
+        "auth":{
+            "apiKey": "5d41b3b238b87cb8bef98e5c18c8fb76",
+            "apiToken" : "ATTAedca4181a52a246dbed8eaebbd3db6102a56ba495b34e89aa482533ad828a044A940F839",
+            "apiKeyInvalido": "5d41b3b238b87cb8bc18c8fb76",
+            "apiTokenInvalido" : "ATTAedca4181a52a246dba56ba495b34e89aa482533ad828a044A940F839"
+        }
+    }
+}

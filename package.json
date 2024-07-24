@@ -1,0 +1,19 @@
+{
+  "name": "desafio-serasa-qa",
+  "version": "1.0.0",
+  "description": "Desafio Serasa QA",
+  "main": "index.js",
+  "scripts": {
+    "cypress:run": "cypress run",
+    "open": "cypress open"
+  },
+  "keywords": [],
+  "author": "Pedro Nascimento",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^13.6.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.3.1"
+  }
+}
